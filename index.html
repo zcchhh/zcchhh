@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量的声明</title>
+</head>
+<body>
+    <h3>关键字 let  ， const </h3>
+    <script>
+        // 1.0 ES5 语法比较自由
+        // var a = 100;
+        // var a = 200;
+        // // 提示不是赋值
+        // if(a = 999){}
+        // b = 300;// 在非严格模式不报错
+        // {
+        //     var c = 400;
+        // }
+        // console.log(c);
+
+        // console.log(dd);// undefined
+        // var dd = 500;
+
+        // function foo(){
+
+        //     function foo1(){
+
+        //         function foo2(){
+
+        //             console.log(dd);
+        //         }
+        //         foo2()
+        //     }
+        //     foo1()
+        // }
+        // foo()
+
+        // 2.0 ES6
+        // let  声明变量   （可以赋值）
+        // const 声明常量  （值是固定）
+        let a = 100;
+        // let a = 200;// 重复声明了 报错 Identifier 'a' has already been declared
+        // 块作用域（代码块）
+        {
+            let b = 200;
+            console.log(b);
+        }
+        // console.log(b);// 报错 b is not defined
+        // console.log(c);// 报错 ： Cannot access 'c' before initialization
+        let c = 300;
+        console.log(c);// 合法的变量
+        // 不存变量声明提升这种机制
+
+        // 常量(值是固定)
+        // const IS_MOUSEDOWN_BOOL = true;
+        // if(IS_MOUSEDOWN_BOOL=false){} // 报错 ，给常量赋值，Assignment to constant variable.
+        const HOST_URL = "http://localhost"
+        const PORT = 8080;
+
+        // 总结：
+            // 语法比较严格、合理
+
+    </script>
+</body>
+</html>
